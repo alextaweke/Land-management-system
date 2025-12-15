@@ -1,0 +1,9 @@
+urban-land-backend/__pycache__/
+urban-land-backend/*.sqlite3
+urban-land-backend/env/
+urban-land-backend/.env
+venv/
+__pycache__/
+*.pyc
+db.sqlite3
+.env
