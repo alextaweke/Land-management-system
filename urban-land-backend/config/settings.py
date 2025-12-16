@@ -83,9 +83,18 @@ ROOT_URLCONF = 'config.urls'
 # CORS_ALLOW_ALL_ORIGINS = True
 # Or for more security, specify allowed origins:
 CORS_ALLOWED_ORIGINS = [
+    "https://land-management-system-v1l0.onrender.com",
     "https://land-management-system-ag10luvsn-alextaweke-5562s-projects.vercel.app",
 ]
+# Add this for Render
+if 'RENDER_EXTERNAL_HOSTNAME' in os.environ:
+    ALLOWED_HOSTS.append(os.environ['RENDER_EXTERNAL_HOSTNAME'])
 
+# Add CSRF trusted origins
+CSRF_TRUSTED_ORIGINS = [
+    'https://land-management-system-v1l0.onrender.com',
+    'https://*.onrender.com',
+]
 
 TEMPLATES = [
     {
